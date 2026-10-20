@@ -93,8 +93,45 @@ textarea{width:100%;min-height:130px;border:1px solid var(--border);border-radiu
 .install-helen .close-install{background:transparent;color:#fff;border:1px solid #ffffff80;white-space:nowrap}
 </style>
 
+
+<style>
+.consent-overlay{position:fixed;inset:0;z-index:5000;background:linear-gradient(145deg,#fce7f3,#fff,#eff6ff);display:flex;align-items:center;justify-content:center;padding:16px;overflow:auto}
+.consent-overlay[hidden]{display:none!important}
+.consent-card{background:#fff;border-radius:24px;box-shadow:0 20px 65px #83184335;max-width:700px;width:100%;max-height:94dvh;display:flex;flex-direction:column;overflow:hidden}
+.consent-header{background:#e91e63;color:white;text-align:center;padding:22px 20px 16px}
+.consent-header img{width:72px;height:72px;border-radius:18px}
+.consent-header h1{margin:8px 0 3px;font-size:1.6rem}.consent-header p{margin:0;font-size:.95rem}
+.consent-terms{overflow:auto;padding:18px 24px;line-height:1.55;font-size:.93rem;min-height:80px}
+.consent-terms h2{font-size:1.03rem;margin:16px 0 5px;color:#9d174d}.consent-terms p{margin:0 0 9px}
+.consent-bottom{border-top:1px solid #e2e8f0;padding:16px 22px;background:#fff}
+.consent-bottom label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:650;margin-bottom:12px}
+.consent-bottom input{width:20px;height:20px;flex-shrink:0;accent-color:#e91e63}
+#acceptHelen{width:100%;border:0;border-radius:12px;background:#e91e63;color:white;padding:13px;font-weight:800;font-size:1rem;cursor:pointer}
+#acceptHelen:disabled{background:#cbd5e1;color:#475569;cursor:not-allowed}
+.consent-bottom .note{font-size:.77rem;color:#64748b;margin:8px 0 0}
+</style>
 </head>
 <body>
+<section id="helenConsent" class="consent-overlay" role="dialog" aria-modal="true" aria-labelledby="consentTitle" hidden>
+<div class="consent-card">
+<div class="consent-header"><img src="icon-192.png" alt="Ícono de HelenAPP"><h1 id="consentTitle">Bienvenido a HelenAPP Mi Voz</h1><p>Comunicación aumentativa y alternativa · Aplicación gratuita</p></div>
+<div class="consent-terms" tabindex="0" aria-label="Términos y condiciones de uso">
+<p><strong>Creadora:</strong> Pamela Condeza M.<br><strong>Contacto:</strong> <a href="mailto:pamela.condeza.mardones@gmail.com">pamela.condeza.mardones@gmail.com</a><br><strong>Términos y condiciones, versión 1.0:</strong> 20 de octubre de 2026.</p>
+<h2>1. Finalidad</h2><p>HelenAPP Mi Voz es una herramienta gratuita de comunicación aumentativa y alternativa, destinada a facilitar la expresión de necesidades, preferencias, emociones y mensajes de personas con dificultades temporales o permanentes para hablar. Busca promover la autonomía, la inclusión y la dignidad.</p>
+<h2>2. Uso y aceptación</h2><p>Al marcar la casilla y pulsar «Aceptar y comenzar», declaras haber leído estos términos y aceptas utilizar la aplicación de forma responsable. Las personas que necesiten apoyo pueden contar con familiares o cuidadores, respetando siempre su voluntad. No debe utilizarse para suplantar a otra persona ni atribuirle mensajes que no haya querido comunicar.</p>
+<h2>3. Gratuidad y funcionalidades</h2><p>La aplicación es gratuita y no requiere suscripción. Ofrece frases predefinidas, pictogramas, voz sintetizada, escritura libre, favoritos, mensajes de ayuda y expresiones chilenas. Las funciones pueden modificarse en futuras versiones.</p>
+<h2>4. Salud y emergencias</h2><p>HelenAPP es un apoyo comunicativo, no un dispositivo médico ni un sistema de alerta o vigilancia. No diagnostica, prescribe ni sustituye la evaluación clínica, el consentimiento informado ni los protocolos asistenciales. Pulsar «Ayuda» o reproducir frases de emergencia <strong>no realiza llamadas ni envía alertas automáticamente</strong>. Ante una emergencia, solicita asistencia inmediata por los medios disponibles.</p>
+<h2>5. Disponibilidad y voz</h2><p>La reproducción de voz depende del navegador, sistema operativo, voces instaladas y configuración de audio. Puede haber errores de pronunciación, interrupciones o incompatibilidades. Comprueba el funcionamiento antes de depender de la aplicación para una comunicación importante. Algunas funciones pueden estar disponibles sin conexión tras su instalación y almacenamiento previo.</p>
+<h2>6. Privacidad y almacenamiento</h2><p>Esta versión no exige crear una cuenta ni incorpora una base de datos remota para guardar mensajes. Las frases favoritas y la aceptación de estos términos se guardan localmente en el navegador o dispositivo. Pueden perderse si se borran los datos de navegación. El texto escrito se utiliza para reproducirlo mediante las funciones de voz del dispositivo; la gestión de esas funciones depende del navegador o sistema operativo. Los servicios externos y la plataforma de alojamiento pueden tratar datos técnicos conforme a sus propias políticas. No se incorporan herramientas propias de publicidad ni de seguimiento analítico en esta versión.</p>
+<h2>7. Propiedad intelectual</h2><p>HelenAPP Mi Voz es una creación de Pamela Condeza M. La distribución gratuita no concede autorización general para comercializarla, atribuirse su autoría o reutilizar elementos protegidos. Los componentes y tecnologías de terceros conservan sus respectivas licencias.</p>
+<h2>8. Responsabilidad y accesibilidad</h2><p>Se procurará mantener y mejorar la aplicación, sin garantizar funcionamiento permanente o compatibilidad universal. Ninguna disposición excluye responsabilidades o derechos que no puedan limitarse legalmente. Se buscará mejorar la accesibilidad, aunque la aplicación puede no responder a todas las necesidades individuales.</p>
+<h2>9. Actualizaciones y legislación</h2><p>Las funcionalidades y estos términos podrán actualizarse. Si cambian sustancialmente, se podrá solicitar una nueva aceptación. Se aplica la legislación chilena pertinente, incluyendo las normas de protección de datos y propiedad intelectual que correspondan.</p>
+<h2>10. Contacto</h2><p>Consultas sobre HelenAPP Mi Voz: <a href="mailto:pamela.condeza.mardones@gmail.com">pamela.condeza.mardones@gmail.com</a>.</p>
+<p><strong>Porque todas las personas merecen tener una voz.</strong></p>
+</div>
+<div class="consent-bottom"><label><input id="consentCheck" type="checkbox"><span>He leído y acepto los Términos y Condiciones de uso de HelenAPP Mi Voz.</span></label><button id="acceptHelen" type="button" disabled>Aceptar y comenzar a usar HelenAPP</button><p class="note">Tu aceptación se guarda solo en este dispositivo. Si se borran los datos, se solicitará nuevamente.</p></div>
+</div></section>
+
 <div class="app">
 <header>
   <div class="header-inner">
@@ -349,5 +386,23 @@ window.addEventListener('appinstalled', () => {
 });
 </script>
 
+
+<script>
+(function(){
+ const KEY='helenapp_terms_accepted_v1';
+ const overlay=document.getElementById('helenConsent');
+ const checkbox=document.getElementById('consentCheck');
+ const button=document.getElementById('acceptHelen');
+ let accepted=false;
+ try{accepted=localStorage.getItem(KEY)==='accepted';}catch(e){}
+ if(!accepted){overlay.hidden=false;document.body.style.overflow='hidden';}
+ checkbox.addEventListener('change',()=>{button.disabled=!checkbox.checked;});
+ button.addEventListener('click',()=>{
+   if(!checkbox.checked)return;
+   try{localStorage.setItem(KEY,'accepted');}catch(e){}
+   overlay.hidden=true;document.body.style.overflow='';
+ });
+})();
+</script>
 </body>
 </html>
